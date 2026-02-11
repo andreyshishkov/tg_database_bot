@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy import text
 from langchain_community.utilities import SQLDatabase
 
-from app.config import db_password, db_user, database, db_host
+from config import db_password, db_user, database, db_host
 
 db_uri = f"postgresql+asyncpg://{db_user}:{db_password}@{db_host}:5432/{database}"
 engine = create_async_engine(db_uri)
