@@ -1,0 +1,47 @@
+# --- Секреты и конфигурация ---
+.env
+.env.local
+.env.*
+secrets.py
+*.key
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Виртуальные окружения ---
+.venv/
+venv/
+ENV/
+env/
+bin/
+lib/
+include/
+
+# --- Базы данных и Docker ---
+# Игнорируем папку с данными Postgres, если она внутри проекта
+postgres_data/
+pgdata/
+*.db
+*.sqlite3
+
+# --- Файлы данных (JSON, CSV) ---
+# Если в JSON лежат сырые данные для загрузки, лучше их не пушить
+*.json
+!package.json  # Исключение, если есть JS-зависимости
+
+# --- IDE и система ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Логи ---
+*.log
+logs/
